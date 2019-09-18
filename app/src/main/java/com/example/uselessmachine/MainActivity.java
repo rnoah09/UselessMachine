@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
                                 if(timesSwitched > 15)
                                 {
-                                    System.exit(0);
+                                finish();
                                 }
                             }
 
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onFinish() {
-                        System.exit(0);
+                        finish();
                     }
                 }.start();
             }
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
                 timesClicked++;
                 Toast.makeText(MainActivity.this, "I don't do anything.", Toast.LENGTH_SHORT).show();
                 if(timesClicked > 20){
-                    System.exit(0);
+                    finish();
                 }
             }
         });
