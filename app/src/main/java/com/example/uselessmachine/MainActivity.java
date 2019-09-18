@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private Button refreshButton;
     private Button uselessButton;
     private ProgressBar progressBar1;
-    private ProgressBar progressbar2;
+    private ProgressBar progressBar2;
     private TextView textViewTitle;
     private TextView textViewLoading;
     private TextView textViewOn;
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         refreshButton = findViewById(R.id.button_refresh_main);
         uselessButton = findViewById(R.id.button_useless_main);
         progressBar1 = findViewById(R.id.progressbar1_refresh_main);
-        progressbar2 = findViewById(R.id.progressbar2_refresh_main);
+        progressBar2 = findViewById(R.id.progressbar2_refresh_main);
         textViewLoading = findViewById(R.id.textview_refresh_main);
         textViewTitle = findViewById(R.id.textview_title_main);
         textViewOn = findViewById(R.id.textview_on_main);
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
                         progressBar1.setVisibility(View.GONE);
                         textViewLoading.setVisibility((View.GONE));
-                        progressbar2.setVisibility(View.VISIBLE);
+                        progressBar2.setVisibility(View.VISIBLE);
 
                     }
                 }.start();
