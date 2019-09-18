@@ -19,10 +19,10 @@ public class MainActivity extends AppCompatActivity {
     private Button uselessButton;
     private ProgressBar progressBar1;
     private ProgressBar progressbar2;
-    private TextView title;
-    private TextView loading;
-    private TextView on;
-    private TextView off;
+    private TextView textViewTitle;
+    private TextView textViewLoading;
+    private TextView textViewOn;
+    private TextView textViewOff;
     private int timesSwitched;
     private int timesClicked;
 
@@ -32,10 +32,10 @@ public class MainActivity extends AppCompatActivity {
         uselessButton = findViewById(R.id.button_useless_main);
         progressBar1 = findViewById(R.id.progressbar1_refresh_main);
         progressbar2 = findViewById(R.id.progressbar2_refresh_main);
-        loading = findViewById(R.id.textview_refresh_main);
-        title = findViewById(R.id.textview_title_main);
-        on = findViewById(R.id.textview_on_main);
-        off = findViewById(R.id.textview_off_main);
+        textViewLoading = findViewById(R.id.textview_refresh_main);
+        textViewTitle = findViewById(R.id.textview_title_main);
+        textViewOn = findViewById(R.id.textview_on_main);
+        textViewOff = findViewById(R.id.textview_off_main);
     }
 
     private void setListeners() {
@@ -82,18 +82,18 @@ public class MainActivity extends AppCompatActivity {
                 uselessSwitch.setVisibility(View.GONE);
                 refreshButton.setVisibility(View.GONE);
                 uselessButton.setVisibility(View.GONE);
-                title.setVisibility(View.GONE);
-                on.setVisibility(View.GONE);
-                off.setVisibility(View.GONE);
+                textViewTitle.setVisibility(View.GONE);
+                textViewOn.setVisibility(View.GONE);
+                textViewOff.setVisibility(View.GONE);
 
-                loading.setVisibility(View.VISIBLE);
+                textViewLoading.setVisibility(View.VISIBLE);
                 progressBar1.setVisibility(View.VISIBLE);
 
                 new CountDownTimer(12000,100) {
                     @Override
                     public void onTick(long l) {
                             progressBar1.incrementProgressBy(1);
-                            loading.setText("Loading Refresh... " + progressBar1.getProgress() + "/100");
+                            textViewLoading.setText("Loading Refresh... " + progressBar1.getProgress() + "/100");
 
                     }
 
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onFinish() {
 
                         progressBar1.setVisibility(View.GONE);
-                        loading.setVisibility((View.GONE));
+                        textViewLoading.setVisibility((View.GONE));
                         progressbar2.setVisibility(View.VISIBLE);
 
                     }
